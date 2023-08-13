@@ -1,0 +1,218 @@
+@charset "UTF-8";
+/* // html */
+html {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #262626;
+  background-color: #F2F2F2;
+  margin: 1.2rem;
+}
+html h1 {
+  font-weight: 700;
+  text-align: center;
+}
+@media (min-width: 420px) {
+  html h1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+html body {
+  background-color: #fcfcfc;
+  border-radius: 20px;
+  box-shadow: 2px 2px 20px 0.5px rgba(0, 0, 0, 0.296);
+  padding-bottom: 1.5rem;
+  /*  //BP para márgenes body*/
+}
+html body .text-input {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #fcfcfc;
+  background-color: #BFBFBF;
+  border-radius: 10px;
+  border: none;
+  padding: 0.5rem 0.8rem;
+}
+@media (min-width: 420px) {
+  html body {
+    margin: 5rem 1.5rem;
+    padding: 1rem 0.5rem 2rem 0.5rem;
+  }
+}
+@media (min-width: 750px) {
+  html body {
+    margin: 5rem 5rem;
+  }
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+  html body {
+    margin: 5rem 10rem;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  html body {
+    margin: 5rem 15rem;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  html body {
+    margin: 5rem 20rem;
+  }
+}
+@media (min-width: 1400px) and (max-width: 1600px) {
+  html body {
+    margin: 5rem 25rem;
+  }
+}
+
+/* Main */
+main {
+  display: flex;
+  justify-content: center;
+}
+main .form {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: left;
+  margin: 0.5rem 1rem 1.5rem 1rem;
+  padding: 0 1.2rem;
+}
+main .form .form-label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+main .form .radio {
+  font-weight: 400;
+}
+main .form .text-input {
+  font-size: 1rem;
+}
+main .form .form-info {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: left;
+  gap: 1rem;
+}
+main .form .form-info .form-section, main .form .form-info .form-section--doc {
+  padding-bottom: 0.5rem;
+}
+main .form .form-info .form-label, main .form .form-info .radio {
+  padding-right: 0.5rem;
+}
+main .form .form-info .form-section {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: left;
+}
+main .form .form-info .form-section--doc {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: left;
+}
+main .form .form-info .form-section--doc div {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: left;
+  gap: 1rem;
+}
+@media (min-width: 420px) {
+  main .form .form-info {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: start;
+  }
+  main .form .form-info .form-section, main .form .form-info .form-section--doc {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: start;
+    padding-bottom: 1.4rem;
+  }
+  main .form .form-info .form-label, main .form .form-info .radio {
+    padding-right: 0.8rem;
+  }
+  main .form .form-info .form-section--doc div {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+@media (min-width: 750px) {
+  main .form {
+    padding: 1rem 15rem;
+  }
+  main .form .text-input {
+    font-size: 1rem;
+  }
+  main .form .form-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: left;
+    padding: 0 1rem;
+  }
+  main .form .form-info .form-section {
+    display: flex;
+    flex-flow: column;
+    justify-content: left;
+    align-items: left;
+  }
+  main .form .form-info .form-section--doc {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: left;
+  }
+  main .form .form-info .form-section--doc div {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: left;
+  }
+}
+@media (min-width: 1100px) {
+  main .form .form-label, main .form .text-input {
+    font-size: 1.4rem;
+  }
+}
+
+/* // footer */
+footer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+footer button {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #08979D;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0 1px 2px hsl(150, 2%, 18%);
+  padding: 0.5rem 1.6rem;
+}
+@media (min-width: 750px) {
+  footer button {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    background-color: #08979D;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 1px 2px hsl(150, 2%, 18%);
+    padding: 0.5rem 2rem;
+  }
+}
