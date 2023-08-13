@@ -10,7 +10,7 @@
     let errorDirec = document.getElementById("errorDirec");
 
 
-    //3 - Informar errores de validación debajo de los campos
+   // 4 - Validaciones en los campos, informando los errores en tiempo real y al intentar enviar el formulario
 
     form.addEventListener("submit", function (event) {
         let isValid = true;
@@ -36,7 +36,9 @@
         }
     });
 
-    
+
+//3 - Informar errores de validación debajo de los campos
+
 // Nombre
 function verifyNameInput(input) {
     const regex = /^[A-ZÁÉÍÓÚÑ]?[a-záéíóúñ]{3,10}$/;
@@ -77,12 +79,12 @@ lastName.addEventListener("input", function (event) {
 const dniOption = document.getElementById("dniOption");
 const cuilOption = document.getElementById("cuilOption");
 
-toggleDocNumber(dniOption);
+chooseDocNumber(dniOption);
 
-dniOption.addEventListener("change", () => toggleDocNumber(dniOption));
-cuilOption.addEventListener("change", () => toggleDocNumber(cuilOption));
+dniOption.addEventListener("change", () => chooseDocNumber(dniOption));
+cuilOption.addEventListener("change", () => chooseDocNumber(cuilOption));
 
-function toggleDocNumber(selectedOption) {
+function chooseDocNumber(selectedOption) {
     const docNumberField = document.getElementById("docNumber");
     
     if (selectedOption.checked) {
