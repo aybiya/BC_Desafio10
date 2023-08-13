@@ -1,0 +1,127 @@
+/* Main */
+@use './h-fonts' as F;
+@use './h-colors' as C;
+@use './mixin.scss' as M;
+
+
+main {
+    display: flex;
+    justify-content: center;
+
+    .form{
+        @include M.Display( flex, column, center, left);
+        margin: 0.5rem 1rem 1.5rem 1rem;
+        padding: 0 1.2rem;
+
+        .form-label {
+            font-size: F.$textSm;
+            font-weight: 600;
+        }
+        .radio{
+            font-weight: 400;
+        }
+
+        .text-input{
+            font-size: F.$textSm;
+        }
+        
+        .form-info{
+            @include M.Display( flex, column, center, left, 1rem);
+
+            .form-section, .form-section--doc {
+                padding-bottom: 0.5rem;
+                
+            }
+
+            .form-label, .radio{
+                padding-right: 0.5rem;
+            }
+
+            .form-section{
+                @include M.Display( flex, column, center, left);
+            } 
+
+            .form-section--doc{
+                @include M.Display( flex, column, center, left);
+                
+                div{
+                    @include M.Display( flex, row, center, left, 1rem);
+                  }
+            } 
+
+        }
+    
+    }
+
+    //BP mobile
+    @include M.medias(mobile) {
+    
+    .form {
+    
+        .form-info{
+            @include M.Display( flex, column, center, start);
+
+            .form-section, .form-section--doc {
+                @include M.Display( flex, row, center, start);
+                padding-bottom: 1.4rem;
+                
+            }
+
+            .form-label, .radio{
+                padding-right: 0.8rem;
+            }
+
+            .form-section--doc{
+                
+                div{
+                    @include M.Display( flex, row, center, center, 1rem);
+                  }
+            } 
+
+        }
+        
+    }    
+
+}
+
+.form{
+    //BP tablet
+    @include M.medias(tablet) {
+        
+        padding: 1rem 15rem;  
+    
+        .text-input{
+            font-size: F.$textSm;
+        }
+            .form-info{
+                @include M.Display( flex, row, space-between, left);
+                padding: 0 1rem;
+
+                .form-section{
+                    @include M.Display( flex, column, left, left);
+                }
+
+                .form-section--doc{
+                      @include M.Display( flex, column, space-between, left);
+
+                      div{
+                        @include M.Display( flex, row, space-between, left);
+                      }
+
+                } 
+                
+            }
+            
+        }
+
+        //BP desktop
+        @include M.medias(desktop) {
+            .form-label, .text-input {
+                font-size: F.$textMd;
+            }
+        }
+
+    }
+
+    
+} 

@@ -1,0 +1,47 @@
+// Declaraciones globales
+
+ // Display
+@mixin Display ( $display, $flexFlow, $justifyContent, $alignItems, $gap : false) {
+    display: $display;
+    flex-flow: $flexFlow;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    @if $gap {
+        gap: $gap;
+    };
+}
+
+// Mediaq (425px)
+@mixin medias($breakpoint){
+    @if $breakpoint == mobile{
+        @media (min-width: 420px){
+            @content;
+        }
+    }
+
+    @if $breakpoint == tablet{
+        @media (min-width: 750px){
+            @content;
+        }
+    }
+
+    @if $breakpoint == desktop{
+        @media (min-width: 1100px){
+            @content;
+        }
+    }
+}
+
+// Botón
+@mixin Button ( $fontSize, $fontWeight, $color, $backgroundColor, $borderRadius, $border, $boxShadow, $padding : false ) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    color: $color;
+    background-color: $backgroundColor;
+    border-radius: $borderRadius;
+    border: $border;
+    box-shadow: $boxShadow;
+    @if $padding{
+        padding: $padding;
+    };
+}

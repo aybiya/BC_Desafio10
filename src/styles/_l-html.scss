@@ -1,0 +1,72 @@
+/* // html */
+
+@use './h-fonts' as F;
+@use './h-colors' as C;
+@use './mixin.scss' as M;
+
+
+html {
+    font-family: F.$mainFont;
+    font-size: F.$fontSize;
+    font-weight: F.$textRegular;
+    line-height: F.$lineHeight;
+    color: C.$primaryColor;
+    background-color: C.$bgColor;  
+    margin: 1.2rem;
+
+    h1 {
+        font-weight: F.$textBlack;
+        text-align: center;
+        @include M.medias(mobile){
+            font-size: F.$textLg;
+            font-weight: F.$textBlack;
+        }
+    }
+
+    body {
+        background-color: C.$formColor;    
+        border-radius: 20px;
+        box-shadow: 2px 2px 20px 0.5px rgba(0, 0, 0, 0.296);
+        padding-bottom: 1.5rem;
+        
+        .text-input{
+            font-size: F.$textSm;
+            font-weight: F.$textLight;
+            color: C.$formColor;
+            background-color: C.$neutralColor;
+            border-radius: 10px;
+            border: none;
+            padding: 0.5rem 0.8rem;
+        }
+
+        //BP mobile
+        @include M.medias(mobile) {
+            margin: 5rem 1.5rem;
+            padding: 1rem 0.5rem 2rem 0.5rem;
+        }
+
+        
+        /*  //BP para márgenes body*/
+       
+        //BP tablet
+        @include M.medias(tablet) {
+            margin: 5rem 5rem;
+        }
+        
+        @media (min-width: 800px) and (max-width: 1000px) {
+            margin: 5rem 10rem;
+        }
+
+        @media (min-width: 1000px) and (max-width: 1200px) {
+            margin: 5rem 15rem;
+        }
+
+        @media (min-width: 1200px) and (max-width: 1400px) {
+            margin: 5rem 20rem;
+        }
+
+        @media (min-width: 1400px) and (max-width: 1600px) {
+            margin: 5rem 25rem;
+        }
+    }
+} 
