@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <!-- links externos -->
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/normalize.css"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <!-- links internos -->
+  <link rel="stylesheet" href="./styles/styles.css">
+  
+  <title>Formulario</title>
+</head>
+<!-- fin head -->
+<body>
+  <header>
+    <h1>Registrarse</h1>
+  </header>
+  <main>
+    <form class="form">
+      <section class="form-info">
+        <!-- Primer nombre -->
+        <article class="form-section">
+          <label for="firstName" class="form-label">Primer nombre:</label>
+          <input type="text" id="firstName" class="text-input" onchange="verifyName(event)" placeholder="Nombre">
+          <div id="errorName"></div>
+        </article>
+        <!-- Primer apellido -->
+        <article class="form-section">
+          <label for="lastName" class="form-label">Primer apellido:</label>
+          <input type="text" id="lastName" class="text-input" onchange="verifyLastName(event)" placeholder="Apellido" required>
+          <div id="errorLstName"></div>
+        </article>
+      </section>
+      <section class="form-info">
+        <!-- Tipo de doc -->
+        <article class="form-section--doc">
+          <label for="docType" class="form-label">Tipo de documento:</label>
+          <div>
+            <input type="radio" id="dniOption" name="test" value="DNI" onchange="docType(this)">
+            <label class="radio" for="test">DNI</label>
+            <input type="radio" id="cuilOption" name="test" value="CUIL" onchange="docType(this)">
+            <label class="radio" for="test">CUIL</label>
+          </div>
+        </article>
+        <!-- Num de doc -->
+        <article class="form-section">
+          <label for="docNumber" class="form-label">Documento:</label>
+          <input type="text" id="docNumber" class="text-input" onchange="verifyDoc(event)" placeholder="Numero de documento">
+          <div id="errorDoc"></div>
+        </article>
+      </section>
+      <section class="form-info">
+        <!-- Dirección -->
+        <article class="form-section">
+          <label for="direction" class="form-label">Dirección:</label>
+          <input type="text" id="direction" class="text-input" onchange="verifyDirec(event)" placeholder="Dirección">
+          <div id="errorDirec"></div>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <button id="submit">Enviar</button>
+    </footer>
+  </form>
+  <script src="main.js"></script>
+</body>
+<!-- fin body -->
+</html>
